@@ -6,48 +6,54 @@ body {
     align-items: center;
     font-family: Arial, sans-serif;
     background: linear-gradient(#ff9a9e, #fad0c4);
+    padding: 20px; /* for mobile spacing */
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-button {
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    background: hotpink;
-    color: white;
-    cursor: pointer;
-    margin: 5px;
-    transition: transform 0.2s;
-}
-
-button:hover {
-    transform: scale(1.1);
+    gap: 3vh;
+    width: 100%;
+    max-width: 900px; /* scale nicely on desktop */
 }
 
 .photo {
-    width: 400px;
+    width: 50vw; /* 50% of viewport width */
+    max-width: 400px; /* don’t get too big on desktop */
     height: auto;
     border-radius: 50%;
 }
 
 .small-img {
-    width: 250px;
+    width: 40vw;
+    max-width: 250px;
     border-radius: 15px;
+}
+
+.card {
+    background: white;
+    padding: 5vw; /* scale padding relative to viewport */
+    border-radius: 2vw; 
+    text-align: center;
+    box-shadow: 0 1vw 2vw rgba(0,0,0,0.15);
+}
+
+button {
+    font-size: 4vw; /* scale with viewport */
+    max-font-size: 22px; /* optional cap for large screens */
+    padding: 1.5vw 4vw;
+    border-radius: 1vw;
+    border: none;
+    background: hotpink;
+    color: white;
+    cursor: pointer;
+    margin: 1vw;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 #overlay {
@@ -73,9 +79,9 @@ button:hover {
 }
 
 #bigGif {
-    max-width: 70%;
-    max-height: 70%;
-    border-radius: 20px;
+    max-width: 90vw; /* bigger on mobile */
+    max-height: 90vh;
+    border-radius: 2vw;
     transform: scale(0.6);
     transition: transform 0.4s ease;
 }
